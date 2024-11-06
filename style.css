@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 75%;
+    margin: 50px auto;
+    border: 5px solid #333;
+    padding: 5px;
+
+    /* untuk membuat tampilan menjadi kolom dan baris */
+    display: grid;
+    /* template penempatan setiap area */
+    grid-template-areas: 
+    'header header'
+    'aside main'
+    'nav main'
+    'footer footer';
+
+    /* untuk menentukan ukuran lebar -> baris pada kolom */
+    grid-template-columns: 1fr 2fr;
+
+    /* untuk mengatur ukuran tinggi -> kolom pada baris */
+    grid-template-rows: 1.8fr 2.2fr 3fr 1fr;
+}
+
+header {
+    background-color: #493628;
+    padding: 20px;
+
+    /* arahkan pada area pada 'container (grid template areas)' -> "header" */
+    grid-area: header;
+
+    /* untuk mengatur posisi semua item ke tengah */
+    display: flex;
+
+    /* untuk mengatur posisi font ke tengah */
+    justify-content: center;
+}
+
+aside {
+    background-color: #AB886D;
+    padding: 20px;
+
+    /* arahkan pada area pada 'container (grid template areas)' -> "aside" */
+    grid-area: aside;
+
+    /* untuk mengatur posisi semua item ke tengah */
+    display: flex;
+
+    /* untuk mengatur posisi font ke tengah */
+    justify-content: center;
+}
+
+nav {
+    background-color: #D6C0B3;
+    padding: 20px;
+
+    /* arahkan pada area pada 'container (grid template areas)' -> "nav" */
+    grid-area: nav;
+
+    /* untuk mengatur posisi semua item ke tengah */
+    display: flex;
+
+    /* untuk mengatur posisi font ke tengah */
+    justify-content: center;
+}
+
+main {
+    background-color: #D1CDCE;
+    padding: 20px;
+
+    /* arahkan pada area pada 'container (grid template areas)' -> "main" */
+    grid-area: main;
+
+    /* untuk mengatur posisi semua item ke tengah */
+    display: flex;
+
+    /* untuk mengatur posisi font ke tengah */
+    justify-content: center;
+}
+
+footer {
+    background-color: #e9e3e3;
+    padding: 20px;
+
+    /* arahkan pada area pada 'container (grid template areas)' -> "footer" */
+    grid-area: footer;
+
+    /* untuk mengatur posisi semua item ke tengah */
+    display: flex;
+
+    /* untuk mengatur posisi font ke tengah */
+    justify-content: center;
+}
+
+/* RESPONSIVE */
+@media(max-width: 576px){
+    .container {
+        /* untuk membuat tampilan menjadi kolom dan baris */
+        display: grid;
+        /* template penempatan setiap area */
+        grid-template-areas: 
+        'header header'
+        'aside aside'
+        'nav nav'
+        'main main'
+        'footer footer';
+
+        /* untuk menentukan ukuran lebar -> baris pada kolom */
+        grid-template-columns: 1fr 2fr;
+
+        /* untuk mengatur ukuran tinggi -> kolom pada baris */
+        grid-template-rows: 1.8fr 2.2fr 2.8fr 3fr 1fr;
+    }
+}
+
+/* TUGAS UTS : Membuat website yang responsif yang di dalamnya menerapkan unsur Flexbox dan Grid */
